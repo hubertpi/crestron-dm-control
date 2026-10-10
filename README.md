@@ -1,5 +1,7 @@
 # Crestron DM Control
 
+**AI authorship:** This integration was written by AI (OpenAI ChatGPT/Codex), with requirements, feedback, and hardware testing provided by the repository owner.
+
 Home Assistant integration for a Crestron DM-MD8x8 matrix and compatible
 DM-RMC display endpoints.
 
@@ -9,7 +11,7 @@ DM-RMC display endpoints.
 2. Add `https://github.com/hubertpi/crestron-dm-control` with type **Integration**.
 3. Find **Crestron DM Control** and download version **0.3.9**.
 4. Restart Home Assistant.
-5. For a new installation, open **Settings → Devices & services → Add integration → Crestron DM Control**.
+5. For a new installation, open **Settings â†’ Devices & services â†’ Add integration â†’ Crestron DM Control**.
 
 This is a HACS custom repository; it is not in the default catalog. HACS installs the tracked files from `custom_components/crestron_cip_diagnostic/`; no release ZIP asset is needed.
 
@@ -25,7 +27,7 @@ Copy `custom_components/crestron_cip_diagnostic/` into your Home Assistant `conf
 
 Set the listener bind IP to an address assigned to your Home Assistant host, and set the DM matrix IP to your DM-MD8x8. The supplied IP defaults describe the tested installation and must be checked for your network. Configure the DM/RMC CIP endpoint to reach the Home Assistant listener. The integration does not configure Crestron equipment for you.
 
-Standalone CIP mode is enabled by default. The target AV3 IP/port are used only if standalone mode is disabled in **Configure**. In **Settings → Devices & services → Crestron DM Control → Configure**, edit connections, input/output labels, and the available sources for each output.
+Standalone CIP mode is enabled by default. The target AV3 IP/port are used only if standalone mode is disabled in **Configure**. In **Settings â†’ Devices & services â†’ Crestron DM Control â†’ Configure**, edit connections, input/output labels, and the available sources for each output.
 
 If running the CIP Bridge alongside DM Control, each listener must use a distinct bind IP/port combination; two integrations cannot listen on the same address and port.
 
@@ -106,12 +108,12 @@ existing installations and entity identities during upgrades.
 
 ## Known limitations
 
-- This release preserves the tested room-specific protocol mappings: input slots 1–6, output slots 17–22, and display receivers `169.254.0.35` (Epson), `.37` (Sharp), `.39` and `.41` (Sony). Labels are editable; hardware addresses and protocol mappings are currently fixed in source.
-- Populated outputs 21–22 provide routing selectors but no mapped display power controls. Verify source labels against the physical input wiring.
+- This release preserves the tested room-specific protocol mappings: input slots 1â€“6, output slots 17â€“22, and display receivers `169.254.0.35` (Epson), `.37` (Sharp), `.39` and `.41` (Sony). Labels are editable; hardware addresses and protocol mappings are currently fixed in source.
+- Populated outputs 21â€“22 provide routing selectors but no mapped display power controls. Verify source labels against the physical input wiring.
 - The DM console connection requires the prompt/command interface used by the tested system; console authentication is not implemented.
 - Matrix routing is read back with `DUMPDMROUTEINFO` every 30 seconds. Off means the output is disconnected. Serial controls require an identified live CIP session.
 - CIP session captures are written locally under `config/crestron_cip_diagnostic/`. Review and redact these before sharing logs.
-- The bundled icon is retained. Registration in Home Assistant Brands and inclusion in the HACS default catalog are separate from custom repository installation.
+- The bundled icon is retained. An open-source license has not yet been selected. HACS CI skips the Brands and license checks for this custom repository. Registration in Home Assistant Brands and inclusion in the HACS default catalog are separate from custom repository installation.
 
 ## Report an issue
 
