@@ -41,14 +41,13 @@
           "output_20_name": "Output 20 name",
           "output_21_name": "Output 21 name",
           "output_22_name": "Output 22 name",
-          "output_17_inputs": "Projector (output 17) — available inputs",
-          "output_18_inputs": "Sharp Touch (output 18) — available inputs",
-          "output_19_inputs": "Sony TV Left (output 19) — available inputs",
-          "output_20_inputs": "Sony TV Right (output 20) — available inputs",
-          "output_21_inputs": "Output 21 — available inputs",
-          "output_22_inputs": "Output 22 — available inputs"
-        },
-        "error": {}
+          "output_17_inputs": "Projector (output 17) â€” available inputs",
+          "output_18_inputs": "Sharp Touch (output 18) â€” available inputs",
+          "output_19_inputs": "Sony TV Left (output 19) â€” available inputs",
+          "output_20_inputs": "Sony TV Right (output 20) â€” available inputs",
+          "output_21_inputs": "Output 21 â€” available inputs",
+          "output_22_inputs": "Output 22 â€” available inputs"
+        }
       }
     }
   }
