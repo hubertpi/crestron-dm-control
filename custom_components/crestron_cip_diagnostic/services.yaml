@@ -1,0 +1,48 @@
+send_raw_serial:
+  name: Send raw serial command
+  description: Send a raw serial payload through an identified active DM-RMC CIP session.
+  fields:
+    receiver_ip:
+      name: Receiver IP
+      description: IPv4 address advertised by the active DM-RMC session.
+      required: true
+      selector:
+        text:
+    command:
+      name: Command
+      description: ASCII command text or hexadecimal bytes, based on Encoding.
+      required: true
+      selector:
+        text:
+          multiline: true
+    encoding:
+      name: Encoding
+      description: Use hex for binary command bytes, such as Sony commands.
+      required: false
+      default: ascii
+      selector:
+        select:
+          options:
+            - ascii
+            - hex
+    terminator:
+      name: Terminator
+      description: Defaults to CR for Epson and Sharp, and none for Sony/other receivers.
+      required: false
+      selector:
+        select:
+          options:
+            - none
+            - CR
+            - LF
+            - CRLF
+    opcode:
+      name: CIP opcode
+      description: Optional decimal opcode; known display receivers use their captured default.
+      required: false
+      selector:
+        number:
+          min: 0
+          max: 255
+          step: 1
+          mode: box
