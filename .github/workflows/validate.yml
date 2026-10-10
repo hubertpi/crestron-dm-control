@@ -21,7 +21,8 @@ jobs:
       - uses: hacs/action@main
         with:
           category: integration
-          ignore: brands
+          # Default-catalog checks; no license is assigned without owner selection.
+          ignore: brands license
   hassfest:
     runs-on: ubuntu-latest
     steps:
