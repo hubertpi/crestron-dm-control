@@ -1,5 +1,7 @@
 # Crestron DM Control
 
+**AI authorship:** This integration was written by AI (OpenAI ChatGPT/Codex), with requirements, feedback, and hardware testing provided by the repository owner.
+
 Home Assistant integration for a Crestron DM-MD8x8 matrix and compatible
 DM-RMC display endpoints.
 
